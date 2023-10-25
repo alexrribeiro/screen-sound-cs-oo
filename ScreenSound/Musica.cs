@@ -6,12 +6,15 @@
     public bool Disponivel { get; set; }
     public string DescricaoResumida =>
         $"A música {Nome} pertence ao artista {Artista}.";
+    public Genero Genero { get; set; }
 
     public void ExibirFichaTecnica()
     {
         Console.WriteLine($"Nome: {Nome}");
         Console.WriteLine($"Artista: {Artista}");
         Console.WriteLine($"Duração: {Duracao}");
+        Console.WriteLine($"Genero: {Genero.Tipo}");
+
         if (Disponivel)
         {
             Console.WriteLine("Disponível no plano.");

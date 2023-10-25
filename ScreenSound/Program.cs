@@ -1,19 +1,21 @@
-﻿Musica musica1 =  new Musica();
-musica1.Nome = "Blinding Lights";
-musica1.Artista = "The Weeknd";
-musica1.Duracao = 199;
-musica1.Disponivel = true;
-//Console.WriteLine(musica1.Disponivel);
-Console.WriteLine(musica1.DescricaoResumida);
+﻿Album letgo = new Album();
+letgo.Nome = "Let Go";
+
+Musica musica1 = new Musica();
+musica1.Nome = "Complicated";
+musica1.Duracao = 244;
+musica1.Genero = new Genero();
+musica1.Genero.Tipo = "Pop rock";
 
 Musica musica2 = new Musica();
-musica2.Nome = "Higher Power";
-musica2.Artista = "Coldplay";
-musica2.Duracao = 209;
-musica2.Disponivel = false;
+musica2.Nome = "My World";
+musica2.Duracao = 207;
+musica2.Genero = new Genero();
+musica1.Genero.Tipo = "Pop rock";
 
-musica1.ExibirFichaTecnica();
+letgo.AdicionarMusica(musica1);
+letgo.AdicionarMusica(musica2);
+
+letgo.ExibirMusicasDoAlbum();
+
 musica2.ExibirFichaTecnica();
-
-//musica1.ExibirNomeEArtista();
-//musica2.ExibirNomeEArtista();
